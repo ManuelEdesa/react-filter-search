@@ -12,10 +12,11 @@ class App extends Component {
     this.showDetails = this.showDetails.bind(this);
     this.searchTerm = this.search.bind(this);
     this.clearInput = this.clearInput.bind(this);
+    this.updateState = this.updateState.bind(this);
   }
   clearInput() {
-    this.setState({searchTerm: '' });
-    // ReactDOM.findDOMNode(this.refs.myInput).focus();
+    this.setState({searchTerm:''});
+     
     this.refs.myInput.focus();
   }
   componentWillMount() {
@@ -36,7 +37,9 @@ class App extends Component {
 
 
   }
-
+  updateState(e) {
+    this.setState({ searchTerm: e.target.value });
+  }
    showDetails(user) {
      user.show = !user.show;
      this.setState({...user});
@@ -50,7 +53,7 @@ class App extends Component {
         <h1>Buscador de Memes </h1>
       </header>
      
-      <input class="search-box" onKeyUp={(e) => this.searchTerm(e)} ref="myInput"  type="text"></input>
+      <input value={this.state.searchTerm} onChange={this.updateState} class="search-box" onKeyUp={(e) => this.searchTerm(e)} ref="myInput"  type="text"></input>
       <button onClick={this.clearInput}>CLEAR</button>
         <ul class="collapse-able">
         {this.state.users.filter(user => {
