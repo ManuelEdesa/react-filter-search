@@ -29,13 +29,13 @@ p, input {
 }
 
 input {
-  border: 2px solid rgb(0, 0, 218);
+  border: 2px solid rgb(6, 6, 20);
   color: rgba(6, 0, 88, 0.877);
   font-size: 16px;
 }
 
 .search-box {
-  box-shadow: 2px 2px 2px 2px rgb(108, 134, 146);
+  box-shadow: 2px 2px 2px 2px rgb(196, 10, 10);
   display: block;
   margin: 24px auto;
   height: 32px;
@@ -44,7 +44,7 @@ input {
 }
 
 .search-box:focus {
-  box-shadow: 2px 4px 2px 2px rgba(16, 3, 255, 0.308);
+  box-shadow: 2px 4px 2px 2px rgba(27, 16, 235, 0.308);
 }
 
 .search-box::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -74,16 +74,12 @@ h3 {
   text-align: center;
 }
 
-p {
-  color: #335;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 0.8rem;
-}
+
 
 li {
-  background: #ccf;
+  background: rgb(139, 98, 98);
   padding: 16px;
-  border: 2px solid #558;
+  border: 2px solid rgb(1, 1, 199);
   border-radius: 8px;
   box-shadow: 2px 2px 8px 2px rgb(138, 145, 148);
   margin: 16px 20%;
