@@ -54,7 +54,7 @@ class App extends Component {
       </header>
      
       <input value={this.state.searchTerm} onChange={this.updateState} class="search-box" onKeyUp={(e) => this.searchTerm(e)} ref="myInput"  type="text"></input>
-      <button onClick={this.clearInput}>CLEAR</button>
+      <button onClick={this.clearInput}>Limpiar</button>
         <ul class="collapse-able">
         {this.state.users.filter(user => {
           return user.name.toLowerCase().indexOf(this.state.searchTerm) > -1;
