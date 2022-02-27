@@ -14,8 +14,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-    fetch(`https://jsonplaceholder.typicode.com/users`).then((res) => res.json()).then((data) => {
-      this.setState({users: data})
+    fetch(`https://api.imgflip.com/get_memes`).then((res) => res.json()).then((data) => {
+      this.setState({users: data.data.memes})
      
     })
   }
@@ -46,12 +46,9 @@ class App extends Component {
         }).map((user) => {
           return (<li onClick={() => this.showDetails(user)}><h2>{user.name}</h2>
           {  user.show ? <div>
-          <p>{user.address.street}</p>
-          <p>{user.address.suite}</p>
-          <p>{user.address.city}</p>
-          <p>{user.address.zipcode}</p>
-          <p>{user.phone}</p>
-          <p>{user.email}</p>
+          <p>{user.name}</p>
+          <p><img src={user.url}/></p>
+         
           </div> : null }
           </li>
           );
