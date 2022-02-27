@@ -47,7 +47,7 @@ class App extends Component {
           return (<li onClick={() => this.showDetails(user)}><h2>{user.name}</h2>
           {  user.show ? <div>
           <p>{user.name}</p>
-          <p><img src={user.url}/></p>
+          <p><img src={user.url} width="250" height="200"/></p>
          
           </div> : null }
           </li>
