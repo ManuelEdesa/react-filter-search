@@ -46,7 +46,7 @@ class App extends Component {
         }).map((user) => {
           return (<li onClick={() => this.showDetails(user)}><h2>{user.name}</h2>
           {  user.show ? <div>
-          <p>{user.name}</p>
+          <p>Id</p>
           <p>{user.id}</p>
           <p><img src={user.url} width="250" height="200"/></p>
          
